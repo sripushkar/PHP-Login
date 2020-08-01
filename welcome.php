@@ -23,14 +23,15 @@
     <div class="container d-flex justify-content-center">
       <div class="text-center">
         <h1 class="text-center">Welcome!</h1>
-      <form class="" action="welcome.php" method="POST">
-        <input type="submit" name="logout" value="Log Out" class="btn btn-primary">
-      </form>
+        <form name="log out" class="" action="welcome.php" method="POST">
+          <input type="hidden" name="l" value="l">
+          <input type="submit" name="logout" value="Log Out" class="btn btn-primary">
+        </form>
       </div>
     </div>
-    <?php if($_isset($_POST['logout'])){
+    <?php if(isset($_POST['logout'])){
       $_SESSION["loginStatus"] = false;
-      header("location: login.php");
+      header("location: index.php");
     } ?>
 
   </body>
