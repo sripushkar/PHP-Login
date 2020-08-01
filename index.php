@@ -26,8 +26,11 @@
         <div class="form-group">
           <button type="submit" name="submit" class="btn btn-primary">Log In</button>
         </div>
+        <div class="form-group">
+          <a href="registration.php" class="badge badge-primary">Don't have an account? Register: </a>
+        </div>
       </form>
-      <a href="registration.php" class="badge badge-primary">Don't have an account? Register</a>
+
     </div>
 
   </body>
