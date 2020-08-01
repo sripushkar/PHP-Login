@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Welcome</title>
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <script src="scripts.js"> </script>
     <!-- CSS only -->
@@ -19,6 +19,10 @@
       if($_SESSION["loginStatus"] == false){
         header("location: login.php");
       }
+      if(isset($_POST['logout'])){
+        $_SESSION["loginStatus"] = false;
+        header("location: index.php");
+      }
      ?>
     <div class="container d-flex justify-content-center">
       <div class="text-center">
@@ -29,10 +33,5 @@
         </form>
       </div>
     </div>
-    <?php if(isset($_POST['logout'])){
-      $_SESSION["loginStatus"] = false;
-      header("location: index.php");
-    } ?>
-
   </body>
 </html>

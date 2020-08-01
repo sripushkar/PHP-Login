@@ -4,7 +4,7 @@ $mysqli = new mysqli('localhost', 'root', 'root', 'loginSystem');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-$_SESSION['message'] = "";
+$_SESSION['message'] = null;
 $_SESSION['loginStatus'] = false;
 
 //Formats fields to avoid SQL Injection

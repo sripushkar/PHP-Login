@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Login</title>
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <script src="scripts.js"> </script>
     <!-- CSS only -->
@@ -14,6 +14,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
   <body>
+    <?php session_start();
+    if($_SESSION['loginStatus'] == true){
+      header("location: welcome.php");
+    }
+
+    if(isset($_SESSION['message'])): ?>
+
+    <div class="alert alert-danger">
+      <?php
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+      ?>
+    </div>
+    <?php endif ?>
     <div class="row justify-content-center">
       <form name="login" action="loginAuth.php" method="POST">
         <h2 style="padding-bottom:4%; padding-top:1vh;">Login:</h2>
