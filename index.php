@@ -15,15 +15,6 @@
     </head>
   <body>
     <div class="row justify-content-center">
-    <?php if(isset($_SESSION['message'])): ?>
-      <div class="alert alert-<?php echo $_SESSION['msg_type']?>">
-        <?php
-          echo $_SESSION['message'];
-          unset($_SESSION['message']);
-        ?>
-      </div>
-    <?php endif ?>
-
       <form name="login" action="authentication.php" method="POST">
         <h2 style="padding-bottom:4%; padding-top:1vh;">Login:</h2>
         <div class="form-group">
@@ -36,6 +27,7 @@
           <button type="submit" name="submit" class="btn btn-primary">Log In</button>
         </div>
       </form>
+      <a href="registration.php" class="badge badge-primary">Don't have an account? Register</a>
     </div>
 
   </body>
