@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $mysqli = new mysqli('localhost', 'root', 'root', 'loginSystem');
 
 $username = $_POST['username'];
@@ -40,6 +41,7 @@ if($duplicateUser->num_rows != 0){
   die();
 }
 else{
+  //$password = password_hash($password, PASSWORD_DEFAULT);
   $register = $mysqli->query("INSERT INTO login (username, password) VALUES ('$username', '$password');");
   header("location: welcome.php");
   $_SESSION['loginStatus'] = true;

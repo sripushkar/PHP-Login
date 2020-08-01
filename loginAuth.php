@@ -14,6 +14,7 @@ $username = stripcslashes($username);
 $password = stripcslashes($password);
 $username = $mysqli->real_escape_string($username);
 $password = $mysqli->real_escape_string($password);
+//$password = password_hash($password, PASSWORD_DEFAULT);
 
 $failedLogin = "Login failed. Please try again.";
 
