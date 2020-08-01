@@ -15,6 +15,10 @@
     </head>
   <body>
     <?php session_start();
+    if($_SESSION['loginStatus'] == true){
+      header("location: welcome.php");
+    }
+
     if(isset($_SESSION['message'])): ?>
 
     <div class="alert alert-danger">
@@ -25,7 +29,7 @@
     </div>
   <?php endif ?>
     <div class="row justify-content-center">
-      <form name="login" action="registerAuth.php" method="POST">
+      <form name="register" action="registerAuth.php" method="POST">
         <h2 style="padding-bottom:4%; padding-top:1vh;">Register:</h2>
         <div class="form-group">
           <input type="username" name="username" placeholder="Username" class="form-control">

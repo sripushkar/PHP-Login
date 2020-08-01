@@ -5,6 +5,7 @@ $mysqli = new mysqli('localhost', 'root', 'root', 'loginSystem');
 $username = $_POST['username'];
 $password = $_POST['password'];
 $_SESSION['message'] = "";
+$_SESSION['loginStatus'] = false;
 
 //Formats fields to avoid SQL Injection
 $username = stripcslashes($username);
@@ -34,6 +35,7 @@ if($duplicateUser->num_rows != 0){
 else{
   $register = $mysqli->query("INSERT INTO login (username, password) VALUES ('$username', '$password');");
   header("location: welcome.php");
+  $_SESSION['loginStatus'] = true;
   die();
 }
 

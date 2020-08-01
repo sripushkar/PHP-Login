@@ -14,10 +14,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
   <body>
-    <div class="row justify-content-center">
-      <h1>Welcome!</h1>
-
+    <?php
+      session_start();
+      if($_SESSION["loginStatus"] == false){
+        header("location: login.php");
+      }
+     ?>
+    <div class="container d-flex justify-content-center">
+      <div class="text-center">
+        <h1 class="text-center">Welcome!</h1>
+      <form class="" action="welcome.php" method="POST">
+        <input type="submit" name="logout" value="Log Out" class="btn btn-primary">
+      </form>
+      </div>
     </div>
+    <?php if($_isset($_POST['logout'])){
+      $_SESSION["loginStatus"] = false;
+      header("location: login.php");
+    } ?>
 
   </body>
 </html>
