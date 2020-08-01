@@ -38,6 +38,9 @@
           <input type="password" name="password" placeholder="Password" class="form-control">
         </div>
         <div class="form-group">
+          <input type="password" name="passwordConf" placeholder="Confirm Password" class="form-control">
+        </div>
+        <div class="form-group">
           <button type="submit" name="submit" class="btn btn-primary">Sign Up</button>
         </div>
         <div class="form-group">

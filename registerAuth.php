@@ -4,6 +4,7 @@ $mysqli = new mysqli('localhost', 'root', 'root', 'loginSystem');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$passwordConf = $_POST['passwordConf'];
 $_SESSION['message'] = null;
 $_SESSION['loginStatus'] = false;
 
@@ -21,6 +22,12 @@ if(strlen($username) < 6 || strlen($username) > 20){
 
 if(strlen($password) < 6){
   $_SESSION['message'] = "Password must be at least 6 characters";
+  header("location: register.php");
+  die();
+}
+
+if($password != $passwordConf){
+  $_SESSION['message'] = "Passwords must match";
   header("location: register.php");
   die();
 }

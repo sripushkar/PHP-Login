@@ -24,7 +24,7 @@
         header("location: index.php");
       }
      ?>
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center" style="padding-top: 2vh">
       <div class="text-center">
         <h1 class="text-center">Welcome!</h1>
         <form name="log out" class="" action="welcome.php" method="POST">
