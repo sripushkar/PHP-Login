@@ -11,5 +11,7 @@ $password = $_POST['password'];
 //Formats fields to avoid SQL Injection
 $username = stripcslashes($username);
 $password = stripcslashes($password);
-$username = mysqli_real_escape_string($con, $username);
-$password = mysqli_real_escape_string($con, $password);
+$username = $mysqli->real_escape_string($username);
+$password = $mysqli->real_escape_string($password);
+
+?>
