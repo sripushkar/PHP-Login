@@ -15,7 +15,7 @@
     </head>
   <body>
     <div class="row justify-content-center">
-      <form name="login" action="authentication.php" method="POST">
+      <form name="login" action="loginAuth.php" method="POST">
         <h2 style="padding-bottom:4%; padding-top:1vh;">Login:</h2>
         <div class="form-group">
           <input type="username" name="username" placeholder="Username" class="form-control">
@@ -27,7 +27,7 @@
           <button type="submit" name="submit" class="btn btn-primary">Log In</button>
         </div>
         <div class="form-group">
-          <a href="registration.php" class="badge badge-primary">Don't have an account? Register: </a>
+          <a href="register.php" class="badge badge-primary">Don't have an account? Register: </a>
         </div>
       </form>
 
