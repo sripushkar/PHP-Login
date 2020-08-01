@@ -6,7 +6,7 @@ This is just a personal project I did to build a super basic login form with PHP
 ### To Do:
 <ul>
 <li>Add more validation rules such as special characters in the password, etc</li>
-<li>Add confirm password field in registration</li>
+<li><strong>Completed 8/1-</strong>   Add confirm password field in registration</li>
 <li>Encrypt passwords in database</li>
 <li>Add a delete account button</li>
 <li>Add required fields in the username and password areas in both pages</li>
