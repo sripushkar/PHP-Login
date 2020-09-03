@@ -16,6 +16,7 @@ CREATE TABLE(
 ```
 
 <br>
+
 ### To Do:
 <ul>
 <li>Add more validation rules such as special characters in the password, etc</li>
