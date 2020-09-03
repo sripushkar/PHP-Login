@@ -14,6 +14,7 @@ CREATE TABLE(
      password VARCHAR(20)
 );
 ```
+
 <br>
 ### To Do:
 <ul>
