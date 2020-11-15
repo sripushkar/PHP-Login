@@ -9,8 +9,8 @@ CREATE DATABASE loginSystem;
 ```
 
 ```
-CREATE TABLE(
-     username VARCHAR(20)
+CREATE TABLE login(
+     username VARCHAR(20),
      password VARCHAR(20)
 );
 ```
